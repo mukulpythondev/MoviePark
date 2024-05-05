@@ -9,14 +9,14 @@ import { TiGroup } from 'react-icons/ti'
 import { Link } from 'react-router-dom'
 
 const Sidebar = () => {
-  const feeds=[{name:"Trending", icon:<FaFire />}, {name:"Popular", icon:<SiGooglegemini />}, {name:"Movies", icon:<BiSolidMoviePlay />}, {name:"TV Shows", icon:<RiTvFill />}, {name:"People", icon:<TiGroup />}]
+  const feeds=[{name:"Trending", icon:<FaFire />, link:"/trending"}, {name:"Popular", icon:<SiGooglegemini />, link:"popular"}, {name:"Movies", icon:<BiSolidMoviePlay />, link:"movie"}, {name:"TV Shows", icon:<RiTvFill />, link:"tv"}, {name:"People", icon:<TiGroup />, link:"people"}]
   return (
     <>
     <div className='w-[20%] border-r-[0.8px] flex flex-col  border-zinc-400 h-full py-8 px-10 ' >
       <h1 className='text-white text-3xl font-bold' > Movie<span className='text-custompurple font-black italic text-3xl  ' >X</span>Play </h1>
       <nav className='mt-10 gap-1 flex flex-col' >
         <h2 className='text-2xl text-white mb-2 font-semibold' >New Feeds</h2>
-        {feeds.map((feed,index)=>( <Link key={index} className='text-xl duration-300 text-zinc-400 px-5 flex items-center gap-1 py-2 rounded-md  hover:bg-custompurple hover:text-zinc-100 ' > {feed.icon} {feed.name} </Link> ))}
+        {feeds.map((feed,index)=>( <Link to={feed.link} key={index} className='text-xl duration-300 text-zinc-400 px-5 flex items-center gap-1 py-2 rounded-md  hover:bg-custompurple hover:text-zinc-100 ' > {feed.icon} {feed.name} </Link> ))}
       </nav>
       <hr className='border-none h-[1px] my-2 bg-zinc-400'  />
 

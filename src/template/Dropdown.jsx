@@ -1,23 +1,22 @@
 import React from 'react';
+import { MdOutlineArrowDropDown } from 'react-icons/md';
 
 const Dropdown = ({ title, options, func }) => {
   return (
-    <div>
+    <div className="relative inline-flex">
       <select
         onChange={func}
-        defaultValue="0"
-        name="Category"
-        id="Category"
-        className="block appearance-none w-24 text-zinc-100 bg-zinc-700  border border-zinc-100 py-1 px-4  rounded leading-tight focus:outline-none focus:bg-gray-900 focus:text-zinc-100"
+        defaultValue={title}
+        className="block appearance-none w-36 text-zinc-100 bg-zinc-700 border border-zinc-100 py-1 px-4 rounded leading-tight focus:outline-none focus:bg-gray-900 focus:text-zinc-100"
       >
-        <option className='text-zinc-100' value={title} disabled > {title} </option>
+        <option value={title} disabled>{title}</option>
         {options.map((o, i) => (
-          <option key={i} value={o} className="text-zinc-500 hover:text-zinc-100">
-            {' '}
-            {o.toUpperCase()}{' '}
-          </option>
+          <option key={i} value={o} className="text-zinc-500 hover:text-zinc-100">{o.toUpperCase()}</option>
         ))}
       </select>
+      <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-white">
+        <MdOutlineArrowDropDown className="text-xl" />
+      </div>
     </div>
   );
 };
