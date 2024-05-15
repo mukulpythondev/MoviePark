@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import Sidebar from '../template/Sidebar'
 import Topnav from '../template/Topnav'
 import Dropdown from '../template/Dropdown'
 import { FaRegArrowAltCircleLeft } from 'react-icons/fa'
@@ -8,6 +7,7 @@ import axios from '../utils/axios'
 import Loader from './Loader'
 import Cards from '../template/Cards'
 import InfiniteScroll from 'react-infinite-scroll-component'
+import GotoTop from './GotoTop'
 const Trending = () => {
   const navigate= useNavigate()
   const [category, setcategory] = useState("all")
@@ -66,6 +66,7 @@ const Trending = () => {
       >
         <Cards cardData={trending} title={category} />
       </InfiniteScroll>
+      <GotoTop/>
     </div>
   </>
   ): <Loader/>
