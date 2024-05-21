@@ -43,7 +43,7 @@ const Home = () => {
               <h1 className='text-3xl text-zinc-400 font-bold' >Trending-{category.toUpperCase()} </h1>
               <Dropdown func={(e)=>setcategory(e.target.value)}  title={"Category"} options={["all", "movie","tv"]} />
         </div>
-        <HorizontalCard trendingdata={trending} />
+        <HorizontalCard trendingdata={trending} title={category} />
       </div>
     </>
   ) : <Loader/>

@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Cards = ({ cardData,title }) => {
-  console.log(title)
   return (
     <div className="flex px-20 w-full relative rounded-md   bg-customblack  gap-14 flex-wrap ">
       {cardData.map((card, index) => (
