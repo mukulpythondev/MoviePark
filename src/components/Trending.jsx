@@ -15,7 +15,7 @@ const Trending = () => {
     const [trending,settrending] =useState([])
     const [page,setpage] =useState(1)
     const [hasMore, sethasMore]= useState(true)
-    document.title = " MovieLabs | Trending " + category.toUpperCase();
+    document.title = " MoviePark | Trending " + category.toUpperCase();
 
     const getTrending = async () => { 
       try {

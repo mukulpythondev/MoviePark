@@ -10,7 +10,7 @@ import MovieDetails from './components/MovieDetails'
 import TvDetails from './components/TvDetails'
 import PersonDetail from './components/PersonDetail'
 import Trailer from './components/Trailer'
-
+import About from "./components/About"
 const App = () => {
   return (
     <div className='h-screen w-screen  flex bg-customblack' >
@@ -23,10 +23,13 @@ const App = () => {
         <Route path='/movie/details/:id/trailer' element={<Trailer/>}  />
         </Route>
         <Route path='/tv' element={<TV/>} />
-        <Route path='/tv/details/:id' element={<TvDetails/>}  />
+        <Route path='/tv/details/:id' element={<TvDetails/>}  >
+        <Route path='/tv/details/:id/trailer' element={<Trailer/>}  />
+           </Route>
         
         <Route path='/person' element={<People/>} />
         <Route path='/person/details/:id' element={<PersonDetail/>}  /> 
+        <Route path='/about' element={<About/>}  /> 
       
       </Routes>
     </div>

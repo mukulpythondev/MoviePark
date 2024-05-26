@@ -15,7 +15,7 @@ const TV = () => {
       const [tv,settv] =useState([])
       const [page,setpage] =useState(1)
       const [hasMore, sethasMore]= useState(true)
-      document.title = `MovieLabs | TV Shows  `  ;
+      document.title = `MoviePark | TV Shows  `  ;
       
     const getTV = async () => { 
         try {

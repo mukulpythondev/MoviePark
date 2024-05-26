@@ -10,7 +10,7 @@ const Home = () => {
   const [wallpaper, setwallpaper] = useState(null)
   const [trending, settrending] = useState(null)
   const [category, setcategory] = useState("all")
-  document.title = " MovieLabs | Home "
+  document.title = " MoviePark | Home "
   const getwallpaper= async ()=>{
     try {
       const {data} = await axios.get(`/trending/all/day`)

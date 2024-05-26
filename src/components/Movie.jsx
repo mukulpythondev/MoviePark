@@ -15,7 +15,7 @@ const Movie = () => {
       const [movie,setmovie] =useState([])
       const [page,setpage] =useState(1)
       const [hasMore, sethasMore]= useState(true)
-      document.title = `MovieLabs | Movies  `  ;
+      document.title = `MoviePark | Movies  `  ;
     const getMovie = async () => { 
         try {
           const { data } = await axios.get(

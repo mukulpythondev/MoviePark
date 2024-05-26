@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import NoImage from '../../public/noimage.jpg'
 const Cards = ({ cardData,title }) => {
   return (
     <div className="flex px-20 w-full relative rounded-md   bg-customblack  gap-14 flex-wrap ">
@@ -11,9 +11,7 @@ const Cards = ({ cardData,title }) => {
         >
           <img
             className="h-[70%] w-full rounded-md object-cover"
-            src={`https://image.tmdb.org/t/p/original${
-              card.poster_path || card.backdrop_path || card.profile_path
-            }`}
+            src={ card.backdrop_path || card.poster_path || card.profile_path ?  `https://image.tmdb.org/t/p/original${card.backdrop_path || card.poster_path || card.profile_path}` : NoImage }
             alt=""
           />
           <h1 className="text-zinc-300 mt-1 p-2 text-lg  font-semibold uppercase">

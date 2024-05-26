@@ -21,7 +21,6 @@ const MovieDetails = () => {
   }
  
   }, [id])
-   console.log(info)
   return info ?  (
     <div style={{background:`linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.5),rgba(0,0,0,.8)), url(https://image.tmdb.org/t/p/original/${info.detail.backdrop_path || info.detail.profile_path })`,
     backgroundPosition:"center", backgroundSize:"cover"
@@ -88,13 +87,10 @@ const MovieDetails = () => {
           
           </div>
           <hr className='mt-7 border-none h-[2px] bg-zinc-400 mb-3 '  />
-          { info.recommendation.length > 0 ? <>
-           <h1 className='text-2xl font-bold  text-white' > Recommeded</h1>
-          <HorizontalCard trendingdata={info.recommendation} /> 
-          </>  : 
-          <>
-            <h1 className='text-2xl font-bold  text-white' > Similar</h1>
-          <HorizontalCard trendingdata={info.similar} /> </> }
+        <>
+           <h1 className='text-2xl font-bold  text-white' > {info.recommendation.length > 0 ? "Recommended ": "Similar"} </h1>
+          <HorizontalCard trendingdata={info.recommendation.length > 0 ? info.recommendation : info.similar} /> 
+          </>   
       <Outlet/>
     </div>
   ): <Loader/>

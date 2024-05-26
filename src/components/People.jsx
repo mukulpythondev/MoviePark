@@ -15,7 +15,7 @@ const People = () => {
       const [people,setpeople] =useState([])
       const [page,setpage] =useState(1)
       const [hasMore, sethasMore]= useState(true)
-      document.title = `MovieLabs | Popular Celebrity  `  ;
+      document.title = `MoviePark | Popular Celebrity  `  ;
       const getPeople = async () => { 
         try {
           const { data } = await axios.get(

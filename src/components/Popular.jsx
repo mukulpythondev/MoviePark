@@ -14,7 +14,7 @@ const Popular = () => {
       const [popular,setpopular] =useState([])
       const [page,setpage] =useState(1)
       const [hasMore, sethasMore]= useState(true)
-      document.title = " MovieLabs | Popular " + category.toUpperCase();
+      document.title = " MoviePark| Popular " + category.toUpperCase();
       const getPopular = async () => { 
         try {
           const { data } = await axios.get(
