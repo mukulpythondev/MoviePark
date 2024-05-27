@@ -36,11 +36,11 @@ const Home = () => {
   return wallpaper && trending ? (
     <>
       <Sidebar/>
-      <div className='w-[80%] h-full overflow-x-hidden overflow-y-auto ' >
-        <Topnav customclass="w-[65%] ml-40"  />
+      <div className=' w-full  md:w-[80%] bg-customblack h-full overflow-x-hidden  overflow-y-auto ' >
+        <Topnav customclass="md:w-[65%]  md:ml-40"  />
         <Header data={wallpaper} />
-        <div className='px-5 py-3 flex justify-between' >
-              <h1 className='text-3xl text-zinc-400 font-bold' >Trending-{category.toUpperCase()} </h1>
+        <div className='md:px-5 py-2 px-2 md:py-3 flex justify-between' >
+              <h1 className='md:text-3xl text-xl  text-zinc-400 font-bold' >Trending-{category.toUpperCase()} </h1>
               <Dropdown func={(e)=>setcategory(e.target.value)}  title={"Category"} options={["all", "movie","tv"]} />
         </div>
         <HorizontalCard trendingdata={trending} title={category} />

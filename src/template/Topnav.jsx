@@ -22,7 +22,7 @@ const Topnav = ({customclass}) => {
   
      
   return (
-    <div className={`h-7vh  z-50   ${customclass}   relative   gap-6 p-4 flex items-center `} >
+    <div className={`h-7vh  z-30 md:z-50  ${customclass}   relative   gap-6 p-4 flex items-center `} >
         <BiSearch className='text-zinc-400 text-3xl' />
       
         <input value={query} onChange={(e)=> setquery(e.target.value) } className={`w-[80%]  text-xl bg-transparent p-2  outline-none border-none text-zinc-100  rounded-lg  `} type="text" placeholder='Search anything...' name="" id="" />

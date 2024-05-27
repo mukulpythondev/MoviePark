@@ -13,7 +13,7 @@ import Trailer from './components/Trailer'
 import About from "./components/About"
 const App = () => {
   return (
-    <div className='h-screen w-screen  flex bg-customblack' >
+    <div className='h-screen w-screen  md:flex bg-customblack' >
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/trending' element={<Trending/>} />

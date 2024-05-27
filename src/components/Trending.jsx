@@ -49,14 +49,20 @@ const Trending = () => {
     <>
     {/* <Sidebar/> */}
     <div className='w-screen h-screen    ' >
-      <div className='w-full flex px-16 py-5  gap-10 items-center  ' >
-            <h1 className='  items-center flex gap-3 text-zinc-400 font-bold' >
-            <FaRegArrowAltCircleLeft onClick={()=> navigate(-1) } className='text-2xl hover:text-custompurple duration-100  cursor-pointer' />
+      <div className='w-full  flex-col md:flex-row flex md:px-16 md:py-5 px-2 py-4  md:gap-10 md:items-center  ' >
+      
+        <h1 className='  items-center flex gap-3 text-zinc-400 font-bold' >
+            <FaRegArrowAltCircleLeft onClick={()=> navigate(-1) } className='text-3xl hover:text-custompurple duration-100  cursor-pointer' />
              <span className='text-3xl' >Trending</span>
               </h1>
-      <Topnav customclass="w-[70%] ml-16 "  />
-      <Dropdown title={"Category"} func={(e)=> setcategory(e.target.value) } options={["all", "movie","tv"]} />
+
+     <div className='md:w-[80%] w-full flex md:flex-row flex-col gap-y-3 md:gap-10 items-center  ' >
+     <Topnav customclass="md:w-[70%] w-full md:ml-16 "  />
+    <div className='flex gap-10' >
+    <Dropdown title={"Category"} func={(e)=> setcategory(e.target.value) } options={["all", "movie","tv"]} />
       <Dropdown title={"Duration"} func={(e)=> setduration(e.target.value) }  options={["week", "day"]} />
+    </div>
+     </div>
       </div>
       <InfiniteScroll
         dataLength={trending.length}

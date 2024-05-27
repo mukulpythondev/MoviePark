@@ -13,8 +13,10 @@ const Trailer = () => {
   
   return (
     <div  className='h-full w-screen  flex  items-start py-[5%] absolute z-40 top-0 left-0  justify-center  bg-[rgba(0,0,0,.8)]' >
-         <IoMdCloseCircleOutline onClick={()=> navigate(-1) } className='hover:text-custompurple duration-100 text-zinc-200 text-4xl absolute z-50 top-10 right-28    cursor-pointer' />
-         { ytvideo ?   <ReactPlayer controls={true} height={600} width={1000} url={`https://www.youtube.com/watch?v=${ytvideo.key}`} /> : <NotFound/> }
+         <IoMdCloseCircleOutline onClick={()=> navigate(-1) } className='hover:text-custompurple duration-100 text-zinc-200 text-4xl absolute z-50 top-5 right-5 md:top-10  md:right-28    cursor-pointer' />
+       <div className='h-2/6 mt-10 md:mt-0 md:h-4/6 w-10/12' >
+       { ytvideo ?   <ReactPlayer  controls={true} height={"100%"} width={"100%"}  url={`https://www.youtube.com/watch?v=${ytvideo.key}`} /> : <NotFound/> }
+       </div>
            
     </div>
   )

@@ -6,8 +6,8 @@ const About = () => {
     document.title = " MoviePark| About Us "
     const navigate= useNavigate()
   return (
-    <div className="w-full h-screen overflow-hidden p-5 bg-customblack text-zinc-100">
-              <FaRegArrowAltCircleLeft onClick={()=> navigate(-1) } className='hover:text-custompurple text-zinc-200 text-3xl duration-100   cursor-pointer' />
+    <div className="w-full h-fit md:h-screen overflow-hidden p-2 bg-customblack text-zinc-100">
+              <FaRegArrowAltCircleLeft onClick={()=> navigate(-1) } className='hover:text-custompurple md:ml-40 md:my-0 my-2 text-zinc-200 text-3xl duration-100   cursor-pointer' />
   
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold  mb-4">About MoviePark</h1>
@@ -33,7 +33,7 @@ const About = () => {
         </ul>
 
        <div className='flex gap-x-3' >
-       <h2 className="text-3xl font-semibold mb-2">Meet Mukul Rana</h2>
+       <h2 className="text-3xl font-semibold mb-2">Meet Mukul Rana → </h2>
     <div className='flex text-2xl items-center  gap-2' >    <a  className='hover:text-custompurple duration-100'
               href="https://www.linkedin.com/in/mukul-webdev" 
               target="_blank" 
@@ -43,7 +43,7 @@ const About = () => {
             </a>
       
             <a  className='hover:text-custompurple duration-100'
-              href="https://github.com/mukulpythondev" 
+              href="https://github.com/mukulpythondev/MoviePark" 
               target="_blank" 
               rel="noopener noreferrer" 
             >
